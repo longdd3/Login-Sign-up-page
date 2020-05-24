@@ -1,0 +1,48 @@
+body,html{
+    width: 100%;
+    height: 100%;
+
+}
+body {
+    background-image: url('bg.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover ;
+    -moz-background-size: cover ;
+}
+.form-group{
+    display: none;
+}
+#next-button:disabled {
+cursor: not-allowed;
+}
+.isValid {
+    border: 2px solid red !important;
+}
+.form-container{
+    width: 500px;
+    position: absolute;
+  top : calc(50% - 250px);
+    left : calc(50% - 250px);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 10px;
+    color: white;
+}
+#next-button{
+    width: 100%;
+}
+#back-button{
+    font-size: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+#back-button:hover{
+    color: gold;
+}
+
+.password-requirements {
+    color: rgb(233, 219, 99);
+    font-weight: bold;
+}

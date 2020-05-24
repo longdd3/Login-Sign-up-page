@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel = "stylesheet" href ="style.css">
+
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-auth.js"></script>
+        <script>
+          const projectId = 'longlogin';
+            const config = {
+            apiKey: 'AIzaSyBSPKIVBBMPtPkGa2jQRAPtpK3lki2OoD0',
+            authDomain: `${projectId}.firebaseapp.com`,
+            databaseURL: `https://${projectId}.firebaseapp.com`,
+            projectId: projectId,
+            storageBucket: `${projectId}.appspot.com`,
+            messagingSenderId: '965993958140'
+          };
+          firebase.initializeApp(config);
+        </script>
+    
+
+
+    </head>
+    <body>
+        <div id = "container" class = "form-container">
+            <h1 class ="header"> 
+                Sign Up
+            </h1>
+            <hr>
+            <div id ="email" class = "form-group" data-step ="1">
+                <label for = "email-input">
+                    Enter your Email                     
+                </label>
+                <input id = "email-input" type ="text" class ="form-control">
+
+            </div>
+            <div id = "email-vertification" class ="form-group" data-step = "2">
+                <label for = "email-vertification-input"> Confirm your Email</label>
+                <input id ="email-vertification-input" type ="text" class ="form-control">
+
+            </div>
+            <div id ="password" class = "form-group" data-step="3"> 
+            <p class = "password-requirements">
+                Password can not contain spaces.
+                Password must be at least 8 characters.
+                It must contain at least 1 digit.
+                1 lower-case letter, and 1 upper-case letter
+                You can use following symbols: @, # , $ , %
+            </p>
+            <label for ="password-input"> Create A Password</label>    
+            <input id ="password-input" type ="password" class= "form-control">
+        </div>
+            <div id ="password-vertification" class = "form-group final" data-step="4">
+                <label for ="passsword-vertification-input">Confirm Your Password</label>
+                <input id ="passsword-vertification-input" type = "password" class = "form-control">
+            </div>
+            <p id = "error-message"> </p>
+            <button  class = "btn btn-primary"id ="next-button">Next</button>
+            <div id = "back-button">&#8592;</div>
+            <div class = "info-section">
+                <p>Already Have An Account</p>
+                <a href="index.html"> Log In!</a>
+            </div>
+        </div>
+        <script src="script.js"></script>    </body>
+</html>
